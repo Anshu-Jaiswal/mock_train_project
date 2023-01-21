@@ -1,5 +1,10 @@
 # mock_train_project
 
+## About 
+
+It is a cross-platform application developed to provide train-related facilities. You can book a ticket, check the train schedule, and use many other features.
+It helps you get a confirmed ticket in the best possible manner on Indian Railways and also helps target less tech-savvy people who prefer offline ticket booking.
+
 ## Note
 
 - This project is still in prototype phase.

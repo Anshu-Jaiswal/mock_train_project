@@ -30,16 +30,16 @@ class _TravelDayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: active ? Colors.blue.shade900 : Colors.grey.shade900,
+      color: active ? Colors.cyanAccent : Colors.cyanAccent,
       margin: EdgeInsets.fromLTRB(4, 0, 0, 0),
       child: Card(
-        color: active ? Colors.blue.shade400 : Colors.grey.shade200,
+        color: active ? Colors.blue.shade400 : Colors.white,
         margin: EdgeInsets.fromLTRB(0, 0, 0, 2),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
           child: Text(
             label[0],
-            style: TextStyle(color: active ? Colors.white : Colors.grey.shade500),
+            style: TextStyle(color: active ? Colors.white : Colors.grey.shade600,fontWeight: FontWeight.bold),
           ),
         ),
       ),

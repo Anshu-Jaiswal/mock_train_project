@@ -10,19 +10,22 @@ class TrainScheduleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Card(
-          color: Colors.amber.shade100,
-          child: ListTile(
-            title: Text(
-              _info.trainName,
-            ),
-            subtitle: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('${_info.source}(${_info.sourceCode})'),
-                const Icon(Icons.arrow_forward_rounded),
-                Text('${_info.destination}(${_info.destinationCode})'),
-              ],
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: Card(
+            color: Colors.indigoAccent,
+            child: ListTile(
+              title: Text(
+                _info.trainName, style: TextStyle (color: Colors.white,)
+              ),
+              subtitle: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('${_info.source}(${_info.sourceCode})',style: TextStyle (color: Colors.white, )),
+                  const Icon(Icons.arrow_forward_rounded,color: Colors.white,size: 18),
+                  Text('${_info.destination}(${_info.destinationCode})',style: TextStyle (color: Colors.white)),
+                ],
+              ),
             ),
           ),
         ),
@@ -35,15 +38,15 @@ class TrainScheduleWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               final schedule = _info.schedule[index];
               return Card(
-                color: Colors.blue.shade100,
+                color: Colors.grey.shade200,
                 child: ListTile(
                   leading: CircleAvatar(
                     child: Text(
                       schedule.stationCode,
-                      style: const TextStyle(fontSize: 12),
+                      style: const TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
                     ),
                   ),
-                  title: Text(schedule.stationName),
+                  title: Text(schedule.stationName,style:TextStyle(fontWeight: FontWeight.w500)),
                   subtitle: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -62,12 +65,12 @@ class TrainScheduleWidget extends StatelessWidget {
 
   runningDaysWidget(DaysOfRun daysOfRun) {
     return Card(
-      color: Colors.black12,
+      color: Colors.grey.shade200,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
-            Text("Running Days "),
+            Text("Running Days ",style: TextStyle(fontWeight: FontWeight.bold)),
             Spacer(), // to add space after row
             RunningDayWidget("M", daysOfRun.mon),
             RunningDayWidget("T", daysOfRun.tue),

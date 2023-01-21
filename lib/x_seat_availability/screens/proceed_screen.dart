@@ -112,12 +112,12 @@ class _ProceedScreenState extends State<ProceedScreen> {
   Widget _infoCard(String title, String trailing) {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 2.0),
-      color: Color.fromARGB(255, 115, 188, 245),
+      color: Colors.grey.shade200,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text(title), Text(trailing,style:TextStyle(color:Colors.black45)),],
+          children: [Text(title), Text(trailing,style:TextStyle(color:Colors.black87)),],
         ),
       ),
     );

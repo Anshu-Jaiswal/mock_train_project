@@ -13,7 +13,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.grey.shade50,
       appBar: AppBar(title: const Text("Mock Train App")),
       body: Center(
         child: Padding(
@@ -43,7 +43,7 @@ class LandingScreen extends StatelessWidget {
   }
 
   ElevatedButton _checkPnrStatusBtn(BuildContext context) {
-    return ElevatedButton(
+    return ElevatedButton(style:ButtonStyle(),
       onPressed: () => Navigator.push(
         context,
         MaterialPageRoute(

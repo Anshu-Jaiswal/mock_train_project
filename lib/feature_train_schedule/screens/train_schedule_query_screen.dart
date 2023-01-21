@@ -20,7 +20,7 @@ class _TrainScheduleQueryScreenState extends State<TrainScheduleQueryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title:Text("Chech Train Schedule")),
       body: Column(
         children: [
           Padding(
@@ -40,9 +40,9 @@ class _TrainScheduleQueryScreenState extends State<TrainScheduleQueryScreen> {
               separatorBuilder: (_, __) => const Divider(color: Colors.black),
               itemCount: trainList.length,
               itemBuilder: (context, index) => ListTile(
-                leading: const Icon(Icons.directions_train_sharp),
-                title: Text(trainList[index].trainName),
-                trailing: Text(trainList[index].trainNo),
+                leading: const Icon(Icons.directions_train_sharp,color: Colors.blue),
+                title: Text(trainList[index].trainName,style: TextStyle(fontWeight:FontWeight.w500 )),
+                trailing: Text(trainList[index].trainNo,style: TextStyle(fontWeight: FontWeight.w500)),
                 onTap: () {
                   print(
                       '_TrainScheduleQueryScreenState.build() tapped on ${trainList[index].trainNo}');

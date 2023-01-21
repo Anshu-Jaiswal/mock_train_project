@@ -110,12 +110,12 @@ class SeatAvlWidget extends StatelessWidget {
           child: Column(
             children: [
               ListTile(
-                tileColor: Colors.blue.shade100,
+                tileColor: Colors.grey.shade200,
                 title: Text(date, style: const TextStyle(fontWeight: FontWeight.bold)),
                 subtitle: Text(
                   status,
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, color: isAvailable ? Colors.green : Colors.pink.shade800),
+                      TextStyle(fontWeight: FontWeight.bold, color: isAvailable ? Colors.pink.shade400 : Colors.pink.shade800),
                 ),
                 trailing: Text("Rs. ${data.totalFare}/-", style: const TextStyle(fontWeight: FontWeight.bold)),
               ),

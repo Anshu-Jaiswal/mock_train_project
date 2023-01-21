@@ -21,7 +21,7 @@ class _TravelClassWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.blue.shade900,
+      color: Colors.cyanAccent,
       margin: EdgeInsets.fromLTRB(4, 0, 0, 0),
       child: Card(
         color: Colors.blue.shade400,
@@ -30,7 +30,7 @@ class _TravelClassWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
           child: Text(
             label,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
           ),
         ),
       ),

@@ -24,12 +24,12 @@ class TrainBtwStationWidget extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: Card(
-              color: Color.fromARGB(255, 250, 205, 246),
+              color: Colors.grey.shade200,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
               child: Column(
                 children: [
                   ListTile(
-                    title: Text(train.trainFullName),
+                    title: Text(train.trainFullName,style:TextStyle(fontWeight: FontWeight.w500)),
                     subtitle: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [Text(train.trainNumber), TravelClassesDisplayWidget(train.classes)],
@@ -105,6 +105,7 @@ class TrainBtwStationWidget extends StatelessWidget {
                 Text(
                   train.destinationName,
                   textAlign: TextAlign.end,
+
                 ),
                 Text(train.destination, style: TextStyle(fontWeight: FontWeight.bold)),
               ],
@@ -119,7 +120,7 @@ class TrainBtwStationWidget extends StatelessWidget {
     return Container(
       height: 2,
       width: 20,
-      color: Colors.red,
+      color: Colors.blue,
     );
   }
 
@@ -192,7 +193,7 @@ class _MidScreenState extends State<MidScreen> {
             child: ListView.builder(
                 itemBuilder: (context, index) {
                   return Card(
-                    color: Colors.blue.shade200,
+                    color: Colors.grey.shade200,
                     child: ListTile(
                       title: Text(widget.train.classes[index]),
                       onTap: () {
